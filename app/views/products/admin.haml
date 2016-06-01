@@ -1,0 +1,27 @@
+.col-md-3.no-padding.inline-block.in-top
+	%nav.medium
+		.white.be-red.col-md-12
+			Admin General
+.col-md-9.inline-block.in-top
+	.card.long-padding
+		.col-md-9.inline-block
+			%h1= @product.name
+		.col-md-3.inline-block
+			%p.big.red.no-margin $USD 10
+		%nav.top-space
+			=link_to product_path(id: @product.id, client:true), class:"be-o-gray green text-center inline-block long-padding col-md-4" do
+				Ver como cliente
+			=link_to edit_product_path(@product), class:"be-o-gray green text-center inline-block long-padding col-md-4" do
+				Editar producto
+			=link_to @product,method: :delete, class:"be-o-gray green text-center inline-block long-padding col-md-4",:"data-confirm" => "¿Estas seguro de eliminar el producto?" do
+				Eliminar producto
+		%div
+			%h3.gray Archivos
+			%ol
+				-@product.attachments.each do |attachment|
+					%li.long-padding.medium.gray.be-o-gray
+						.col-xs-11.inline-block= link_to attachment.archivo_file_name, attachment
+						.col-xs-1.inline-block
+							=link_to attachment,method: :delete,:"data-confirm" => "¿Estas seguro de eliminar el producto?",class:"red" do
+								X
+			= render "attachments/form", product_id: @product.id

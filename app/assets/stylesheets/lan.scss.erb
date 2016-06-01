@@ -1,0 +1,47 @@
+$red: #D2527F;
+
+@font-face{
+	font-family: "Kostic";
+	src: url(<%= asset_path("Kostic-Reglar.ttf") %>) format('truetype');
+}
+@font-face{
+	font-family: "Kostic";
+	src: url(<%= asset_path("Kostic-Bold.ttf") %>) format('truetype');
+	font-weight: bold;
+}
+@font-face{
+	font-family: "Kostic";
+	src: url(<%= asset_path("Kostic-Thin.ttf") %>) format('truetype');
+	font-weight: lighter;
+}
+.kostic{
+	font-family: "Kostic";
+}
+.circle{
+	border-radius: 50%;
+	display: inline-block;
+	padding-top: 10px;
+	height: 70px;
+	width: 80px;
+}
+.landing-form{
+	border: none;
+	outline: none;
+	border-bottom: solid 1px $red;
+	color: $red;
+	font-size: 1.5em;
+}
+::-webkit-input-placeholder{
+	color: $red;
+}
+:-moz-placeholder{
+	color: $red;
+	opacity: 1;
+}
+::-moz-placeholder{
+	color: $red;
+	opacity: 1;
+}
+:-ms-input-placeholder{
+		color: $red;
+}

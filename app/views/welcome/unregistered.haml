@@ -1,0 +1,63 @@
+%header.be-green.large-padding
+	.col-md-10.no-float.center-block
+		.col-md-6.no-padding.inline-block
+			=image_tag "tiendus.png",width:"100"
+			%h1.white.ultra-big
+				%strong.kostic
+					Ofrece Tus Productos Digitales a Tu Audiencia
+		.col-md-5.inline-block
+			=image_tag "mono.png"
+.be-gray.white.large-padding
+	.col-md-10.no-float.center-block
+		.absolute{style:"bottom:-4.5em;width: 100%;left:0px;"}
+			.text-center.big
+				.col-md-3.inline-block
+					.be-white.gray.circle
+						%strong 1
+				.col-md-3.inline-block
+					.be-white.gray.circle
+						%strong 2
+				.col-md-3.inline-block
+					.be-white.gray.circle
+						%strong 3
+		%h2.bigger.kostic.text-center
+			%strong Tiendus En 3 Pasos
+		%div.text-center.top-space.kostic
+			.col-md-3.inline-block.text-left
+				=image_tag "upload-icon.png", class:"col-md-10 inline-block"
+				.top-space
+					%strong.medium
+						Sube tus archivos a Tiendus
+					%p.white.text-justify.small
+						¡Libro digital, canción, comic, curso
+						o lo que se te ocurra! Si lo puedes 
+						meter en un .Zip, lo puedes vender.*
+			.col-md-3.inline-block.text-left
+				=image_tag "youtube-icon.png", class:"col-md-10 inline-block"
+				.top-space
+					%strong.medium
+						Sube tus archivos a Tiendus
+					%p.white.text-justify.small
+						comparte el link personalizado de 
+						tus productos en tus redes sociales
+						o sitio web.
+			.col-md-3.inline-block.text-left
+				=image_tag "money-icon.png", class:"col-md-10 inline-block"
+				.top-space
+					%strong.medium
+						Sube tus archivos a Tiendus
+					%p.white.text-justify.small
+						¡Libro digital, canción, comic, curso
+						o lo que se te ocurra! Si lo puedes 
+						meter en un .Zip, lo puedes vender.*
+.be-red.white.large-padding.kostic{style:"margin-top:5em;"}
+	.col-md-8.no-float.text-center.center-block
+		=image_tag "media-icons.png"
+		%p.medium.com-md-11.center-text.no-float.top-space
+			%strong
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi repudiandae veritatis temporibus debitis commodi eius, quod accusamus dolore ab eaque fugit rerum aut sint placeat culpa, voluptates dicta dignissimos voluptatum!
+.top-space.large-padding.bottom-space
+	.col-md-11.col-xs-12.center-block.no-float
+		=form_tag(create_email_path, method: :post, remote:true, id: "emails-form" ) do
+			=email_field_tag "email",nil,class:"col-xs-12 inline-block text-center landing-form",placeholder:"Escribe Tu E-Mail"
+		#email-info.be-red.white.long-padding.text-center
