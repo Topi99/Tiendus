@@ -1,0 +1,12 @@
+%h1 Listing products
+
+-@products.each do |product|
+  .col-md-4
+    .card
+      .img-fluid
+        =image_tag product.avatar.url
+      .card-block
+        %h4.card-title= product.name
+        %p.card-text= "$#{product.pricing}"
+
+= link_to 'New Product', new_product_path
