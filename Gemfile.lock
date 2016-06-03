@@ -127,6 +127,7 @@ GEM
       multi_json (~> 1.0)
       uuidtools (~> 2.1)
       xml-simple
+    pg (0.18.4-x86-mingw32)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -236,6 +237,7 @@ DEPENDENCIES
   jquery-rails
   paperclip
   paypal-sdk-rest
+  pg
   rails (= 4.2.0)
   rspec-rails
   sass-rails (~> 5.0)

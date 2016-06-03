@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -45,13 +45,17 @@ gem 'paypal-sdk-rest'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+group :production do
+	gem 'pg'
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
   #Anotacion de los modelos
   gem "annotate"
-
+  gem 'sqlite3'
   gem 'shoulda-matchers'
   gem 'rspec-rails'
   gem "factory_girl_rails", "~> 4.0"
