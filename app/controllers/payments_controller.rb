@@ -22,8 +22,8 @@ class PaymentsController < ApplicationController
 				}
 			],
 			redirect_urls: {
-				return_url: "http://localhost:3000",
-				cancel_url: "http://localhost:3000/carrito"
+				return_url: "https://mitiendus.heroku.com",
+				cancel_url: "http://mitiendus.heroku.com/carrito"
 			}
 		})
 
